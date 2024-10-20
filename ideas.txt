@@ -1,0 +1,57 @@
+- Ultimate Vision:
+	- A PDF viewer which can be utilized from any device
+	- Tailored for efficient reading of long technical documents such as
+	  text books or scientific papers where referring to specific pages
+	  is a common task.
+	- I envision an interface which has a bar at the bottom or the side
+	  which represents the entirety of the text. Like a scroll bar.
+	  Attractive icons (arrows) will represent user defined bookmarks that
+	  visually show (relatively) where in the text the bookmark points to.
+	- Bookmarks can be customized by color, potentially text, etc.
+	- I want this to be a very lightweight viewer that is highly responsive
+	  and focuses intensely on the experience of reading a pdf and make it
+	  as close to the experience of flipping back and forth in a physical
+	  text book as possible.
+	- A split-pane functionality would be cool, where the user could render
+	  multiple bookmarks at once on screen in a split screen.
+	- Everything should be designed to make the user's reading experience
+	  as frictionless as possible.
+
+- Backend Considerations:
+	- Server sider rendering
+		- Python PDF libraries:
+			- PyMuPDF
+			- pdfminer
+			- pdfrw
+	- Image streaming
+	- Security
+		- Store passwords using hashing algorithm such as bcrypt,
+		  Argon2, or PBKDF2
+		- Enforce strong password policy
+		- Rate limiting or CAPTCHA to prevent brute force attack
+		- Potentially use OAuth
+	- User authentication
+		- Token-based authentication
+			- Use strong algorithms (HS256, RS256)
+			- Expiration (short for access tokens, long for refresh
+			  tokens)
+			- Protect tokens from XSS and CSRF attacks
+			- Implement token refresh mechanism. Lets user gain a
+			  new auth token without having to login again
+	- User authorization
+		- Role-based access control (RBAC)
+	- Password recovery and account lockout
+	- User activity persistence
+	- Storage
+	- User access permissions
+
+- Frontend Considerations:
+	- 
+
+- WIP Structural Plan:
+	- Backend
+		- Python?
+		- Golang?
+	- Frontend
+		- Typescript
+
